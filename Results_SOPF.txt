@@ -1,0 +1,90 @@
+ampl: include SOPF.mod;
+
+Presolve eliminates 3080 constraints and 550 variables.
+Adjusted problem:
+1110 variables, all linear
+1040 constraints, all linear; 8460 nonzeros
+	620 equality constraints
+	420 inequality constraints
+1 linear objective; 220 nonzeros.
+
+Gurobi 9.1.1: mipgap=0.0
+timelim=90
+Gurobi 9.1.1: optimal solution; objective 50302.09562
+393 simplex iterations
+
+Presolve eliminates 3080 constraints and 550 variables.
+Adjusted problem:
+1110 variables, all linear
+1040 constraints, all linear; 8460 nonzeros
+	620 equality constraints
+	420 inequality constraints
+1 linear objective; 220 nonzeros.
+
+_solve_system_time = 0.015625
+
+_solve_user_time = 0.015625
+
+_total_solve_time = 0.03125
+
+_total_solve_elapsed_time = 0.063
+
+sum{g in RES} (res_PgInit[g]*res_PgFC[s,g] - PgRES[g,s])*BaseMVA [*] :=
+ 1  0
+ 2  0
+ 3  0
+ 4  0
+ 5  0
+ 6  0
+ 7  0
+ 8  0
+ 9  0
+10  0
+;
+
+sum{n in BUS} loadShed[n,s]*BaseMVA [*] :=
+ 1  0
+ 2  0
+ 3  0
+ 4  0
+ 5  0
+ 6  0
+ 7  0
+ 8  0
+ 9  0
+10  0
+;
+
+sum{g in GEN} (u[g,s] - gen_st[g]) [*] :=
+ 1  0
+ 2  0
+ 3  0
+ 4  0
+ 5  0
+ 6  0
+ 7  0
+ 8  0
+ 9  0
+10  0
+;
+
+LMP [*] :=
+ 1  60.0511    6  51.7469   11  43.6241   16  24.9324   21  16.4888
+ 2  59.2501    7  50.9411   12  45.1795   17  15.2952   22  16.0197
+ 3  85.1589    8  52.2121   13  42.1684   18  15.9141   23  35.0223
+ 4  56.947     9  55.061    14  35.8513   19  29.23     24 116.4
+ 5  54.7998   10  49.3631   15  17.741    20  32.967
+;
+
+avgLMP = 44.2652
+avgLMPLoadWeighted = 44.0802
+
+loadPayment = 125629
+resGenRevenue = 20686.1
+genRevenue = 75789.1
+genProfit = 25487
+networkCongestionRevenue = 29153.5
+
+Cost = 50302.1
+
+ampl: 

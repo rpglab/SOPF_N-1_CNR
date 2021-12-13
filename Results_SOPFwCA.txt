@@ -1,0 +1,133 @@
+ampl: include SOPFwCA.mod;
+
+Presolve eliminates 31650 constraints and 1000 variables.
+Adjusted problem:
+23600 variables, all linear
+23530 constraints, all linear; 86660 nonzeros
+	23110 equality constraints
+	420 inequality constraints
+1 linear objective; 220 nonzeros.
+
+Gurobi 9.1.1: mipgap=0.0
+timelim=90
+Gurobi 9.1.1: optimal solution; objective 55499.75184
+5648 simplex iterations
+
+Presolve eliminates 31650 constraints and 1000 variables.
+Adjusted problem:
+23600 variables, all linear
+23530 constraints, all linear; 86660 nonzeros
+	23110 equality constraints
+	420 inequality constraints
+1 linear objective; 220 nonzeros.
+
+_solve_system_time = 0.046875
+
+_solve_user_time = 1.29688
+
+_total_solve_time = 1.34375
+
+_total_solve_elapsed_time = 0.344
+
+(sum{g in GEN} Pg[g,s] + sum{g in RES} PgRES[g,s])*BaseMVA [*] :=
+ 1  2850
+ 2  2850
+ 3  2850
+ 4  2850
+ 5  2850
+ 6  2850
+ 7  2850
+ 8  2850
+ 9  2850
+10  2850
+;
+
+# $2 = sum{g in RES} res_PgInit[g]*res_PgFC[s,g]*BaseMVA
+:  sum{g in RES} PgRES[g,s]*BaseMVA    $2      :=
+1               500.5                 500.5
+2               540                   540
+3               672.5                 672.5
+4               712.5                 712.5
+5               576.933               589
+6               592                   592
+7               614                   614
+8               589                   589
+9               604.5                 604.5
+10              630.5                 630.5
+;
+
+sum{g in RES} (res_PgInit[g]*res_PgFC[s,g] - PgRES[g,s])*BaseMVA [*] :=
+ 1   0
+ 2   0
+ 3   0
+ 4   0
+ 5  12.0668
+ 6   0
+ 7   0
+ 8   0
+ 9   0
+10   0
+;
+
+sum{n in BUS} loadShed[n,s]*BaseMVA [*] :=
+ 1  0
+ 2  0
+ 3  0
+ 4  0
+ 5  0
+ 6  0
+ 7  0
+ 8  0
+ 9  0
+10  0
+;
+
+sum{g in GEN} (u[g,s] - gen_st[g]) [*] :=
+ 1  0
+ 2  0
+ 3  0
+ 4  0
+ 5  0
+ 6  0
+ 7  0
+ 8  0
+ 9  0
+10  0
+;
+
+LMP [*] :=
+ 1   0         6   0        11   0        16   0        21   0
+ 2   0         7 -19.4192   12   0        17   0        22   0
+ 3   0         8   0        13   0        18   0        23   0
+ 4   0         9   0        14   0        19   0        24   0
+ 5   0        10   0        15   0        20   0
+;
+
+LMP_c [*] :=
+ 1  52.833      6  70.587     11  62.5634    16  13.8505    21   6.4604
+ 2  84.9342     7  68.2393    12  56.828     17   8.03032   22   7.07748
+ 3  95.0526     8  68.2393    13  53.7625    18   7.21629   23  34.8588
+ 4  76.9709     9  70.4498    14  21.3131    19  22.7985    24 129.227
+ 5  71.5432    10  66.0287    15   4.81351   20  30.5794
+;
+
+LMP [*] :=
+ 1  52.833      6  70.587     11  62.5634    16  13.8505    21   6.4604
+ 2  84.9342     7  48.8201    12  56.828     17   8.03032   22   7.07748
+ 3  95.0526     8  68.2393    13  53.7625    18   7.21629   23  34.8588
+ 4  76.9709     9  70.4498    14  21.3131    19  22.7985    24 129.227
+ 5  71.5432    10  66.0287    15   4.81351   20  30.5794
+;
+
+avgLMP = 48.5349
+avgLMPLoadWeighted = 50.5011
+
+loadPayment = 143928
+resGenRevenue = 14733
+genRevenue = 77117.6
+genProfit = 21617.9
+networkCongestionRevenue = 52077.6
+
+Cost = 55499.8
+
+ampl: 

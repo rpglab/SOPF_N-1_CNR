@@ -1,0 +1,79 @@
+ampl: include SOPF_InfiniteNetwork.mod;
+Gurobi 9.1.1: mipgap=0.0
+timelim=90
+Gurobi 9.1.1: optimal solution; objective 47923.1
+299 simplex iterations
+
+Presolve eliminates 2320 constraints and 550 variables.
+Adjusted problem:
+1110 variables, all linear
+1040 constraints, all linear; 8460 nonzeros
+	620 equality constraints
+	420 inequality constraints
+1 linear objective; 220 nonzeros.
+
+_solve_system_time = 0.015625
+
+_solve_user_time = 0.03125
+
+_total_solve_time = 0.046875
+
+_total_solve_elapsed_time = 1.156
+
+sum{g in RES} (res_PgInit[g]*res_PgFC[s,g] - PgRES[g,s])*BaseMVA [*] :=
+ 1  0
+ 2  0
+ 3  0
+ 4  0
+ 5  0
+ 6  0
+ 7  0
+ 8  0
+ 9  0
+10  0
+;
+
+sum{n in BUS} loadShed[n,s]*BaseMVA [*] :=
+ 1  0
+ 2  0
+ 3  0
+ 4  0
+ 5  0
+ 6  0
+ 7  0
+ 8  0
+ 9  0
+10  0
+;
+
+sum{g in GEN} (u[g,s] - gen_st[g]) [*] :=
+ 1  0
+ 2  0
+ 3  0
+ 4  0
+ 5  0
+ 6  0
+ 7  0
+ 8  0
+ 9  0
+10  0
+;
+
+LMP [*] :=
+ 1 44.2    4 44.2    7 44.2   10 44.2   13 44.2   16 44.2   19 44.2   22 44.2
+ 2 44.2    5 44.2    8 44.2   11 44.2   14 44.2   17 44.2   20 44.2   23 44.2
+ 3 44.2    6 44.2    9 44.2   12 44.2   15 44.2   18 44.2   21 44.2   24 44.2
+;
+
+avgLMP = 44.2
+avgLMPLoadWeighted = 44.2
+
+loadPayment = 125970
+resGenRevenue = 26716.7
+genRevenue = 99253.3
+genProfit = 51330.2
+networkCongestionRevenue = 2.54659e-11
+
+Cost = 47923.1
+
+ampl: 

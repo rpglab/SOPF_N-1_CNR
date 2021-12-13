@@ -1,0 +1,46 @@
+# Load data
+data;
+param: BUS: bus_Pd :=       # data for the Buses
+        include BusData_24.dat;
+
+param: GEN: gen_bus gen_Pmin gen_Pmax gen_PgInit gen_st gen_FastUnit gen_ERamp gen_SPRamp gen_OpCost gen_NLCost gen_SuCost :=     # data for the GENs
+        include GenData_24.dat;
+
+param: BRANCH:  branch_fbus  branch_tbus  branch_x  branch_rateA  branch_rateC branch_radial := 
+        include BranchData_24.dat;
+
+param: RES:  res_bus  res_PgInit := 
+        include ResData_24.dat;
+
+# load RES scenarios:
+data ResScenarioData_24.dat;
+
+# Convert MW unit to per unit system; cost unit remain
+for {n in BUS} {
+	let bus_Pd[n] := bus_Pd[n]/BaseMVA;
+};
+
+for {g in GEN} {
+	let gen_Pmin[g] := gen_Pmin[g]/BaseMVA;
+	let gen_Pmax[g] := gen_Pmax[g]/BaseMVA;
+	let gen_PgInit[g] := gen_PgInit[g]/BaseMVA;
+	let gen_ERamp[g] := gen_ERamp[g]/BaseMVA;
+	let gen_SPRamp[g] := gen_SPRamp[g]/BaseMVA;
+};
+
+for {k in BRANCH} {
+	let branch_rateA[k] := branch_rateA[k]/BaseMVA;
+	let branch_rateC[k] := branch_rateC[k]/BaseMVA;
+}
+
+for {r in RES} {
+	let res_PgInit[r] := res_PgInit[r]/BaseMVA;
+}
+
+# assign weight to each scenario 
+for {s in SCENARIO} {
+	let scenarioProb[s] := 1/numScenario;
+}
+
+
+
