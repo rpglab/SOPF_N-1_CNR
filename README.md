@@ -16,6 +16,7 @@ The following paper provides more details about these four models:
 
 ## Citation:
 If you use these codes for your work, please cite the following paper:
+
 Xingpeng Li and Qianxue Xia, “Stochastic Optimal Power Flow with Network Reconfiguration: Congestion Management and Facilitating Grid Integration of Renewables”, *IEEE PES T&D Conference & Exposition*, (Virtually), Chicago, IL, USA, Oct. 2020.
 
 ## Contact:
