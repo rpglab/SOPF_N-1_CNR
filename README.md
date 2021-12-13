@@ -2,7 +2,6 @@
 This repo implements four different Stochastic Optimal Power Flow (SOPF) models in AMPL. The test case used here is a modified IEEE 24-bus system; but these codes can work on any other systems.
 
 
-
 (i) Model 1, R-SOPF, a relaxed SOPF model that assums infinite network capacity.
 
 (ii) Model 2, N-SOPF, a normal SOPF model that enforces base-case network constraints only.
