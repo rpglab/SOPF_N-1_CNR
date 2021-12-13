@@ -1,23 +1,15 @@
 # SOPF
-This repo implements four different Stochastic Optimal Power Flow (SOPF) models.
+This repo implements four different Stochastic Optimal Power Flow (SOPF) models in AMPL. A test case, IEEE 24-bus system, is also added here.
 
-: (i) a relaxed SOPF model that assums infinite network capacity; (ii) a normal SOPF model that enforces base-case network constraints only; (iii) a N-1 SOPF model that enforces both base-case network constraints and contingency-case network constraints; (iv) a N-1 SOPF w. CTS model that implements corrective transmission switching in post-contingency cases beyong the N-1 SOPF model.
+(i) Model 1, R-SOPF, a relaxed SOPF model that assums infinite network capacity.
 
-Model 1: R-SOPF
-(i) a relaxed SOPF model that assums infinite network capacity.
+(ii) Model 2, N-SOPF, a normal SOPF model that enforces base-case network constraints only.
 
-Model 2: N-SOPF
-(ii) a normal SOPF model that enforces base-case network constraints only.
+(iii) Model 3, E-SOPF, a N-1 SOPF model that enforces both base-case network constraints and contingency-case network constraints.
 
-Model 3: E-SOPF
-(iii) a N-1 SOPF model that enforces both base-case network constraints and contingency-case network constraints.
-
-Model 4: E-SOPFwNR
-(iv) a N-1 SOPF w. CTS model that implements corrective transmission switching in post-contingency cases beyong the N-1 SOPF model.
-
+(iv) Model 4, E-SOPFwNR, a N-1 SOPF w. CTS model that implements corrective transmission switching in post-contingency cases beyong the N-1 SOPF model.
 
 The following paper provides more details about these four models: 
-
 <a class="off" href="https://ieeexplore.ieee.org/document/9299954" target="_blank">Xingpeng Li and Qianxue Xia, “Stochastic Optimal Power Flow with Network Reconfiguration: Congestion Management and Facilitating Grid Integration of Renewables”, IEEE PES T&D Conference & Exposition, (Virtually), Chicago, IL, USA, Oct. 2020. (DOI: 10.1109/TD39804.2020.9299954)</a>
 
 ## Citation:
