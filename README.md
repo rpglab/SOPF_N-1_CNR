@@ -9,7 +9,9 @@ This repo implements four different Stochastic Optimal Power Flow (SOPF) models 
 
 (iv) Model 4, E-SOPFwNR, a N-1 SOPF w. CTS model that implements corrective transmission switching in post-contingency cases beyong the N-1 SOPF model.
 
+
 The following paper provides more details about these four models: 
+
 <a class="off" href="https://ieeexplore.ieee.org/document/9299954" target="_blank">Xingpeng Li and Qianxue Xia, “Stochastic Optimal Power Flow with Network Reconfiguration: Congestion Management and Facilitating Grid Integration of Renewables”, IEEE PES T&D Conference & Exposition, (Virtually), Chicago, IL, USA, Oct. 2020. (DOI: 10.1109/TD39804.2020.9299954)</a>
 
 ## Citation:
