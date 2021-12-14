@@ -10,6 +10,7 @@ This repo implements four different Stochastic Optimal Power Flow (SOPF) models 
 
 (iv) Model 4, E-SOPFwNR, a N-1 SOPF w. CTS model that implements corrective transmission switching in post-contingency cases beyong the N-1 SOPF model.
 
+For the most complex model (E-SOPFwNR), the code takes 130 seconds (~2 minutes) on a laptop: Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz, 32 GB RAM, Windows 10.
 
 The following paper provides more details about these four models: 
 
