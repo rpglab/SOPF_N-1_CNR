@@ -1,9 +1,6 @@
 # SOPF
 This repo implements four different Stochastic Optimal Power Flow (SOPF) models in AMPL. 
 
-The test case used here is a modified IEEE RTS-96 reliability test system (24-bus) that was initially developed by the IEEE reliability subcommittee and published in 1979 and later enhanced in 1996. Reference: "The IEEE Reliability Test System-1996. A report prepared by the Reliability Test System Task Force of the Application of Probability Methods Subcommittee" and link: https://ieeexplore.ieee.org/document/780914.
-Though only tested on this single system here, these codes can work on any other systems.
-
 (i) Model 1, R-SOPF, a relaxed SOPF model that assums infinite network capacity.
 
 (ii) Model 2, N-SOPF, a normal SOPF model that enforces base-case network constraints only.
@@ -11,6 +8,9 @@ Though only tested on this single system here, these codes can work on any other
 (iii) Model 3, E-SOPF, a N-1 SOPF model that enforces both base-case network constraints and contingency-case network constraints.
 
 (iv) Model 4, E-SOPFwNR, a N-1 SOPF w. CTS model that implements corrective transmission switching in post-contingency cases beyong the N-1 SOPF model.
+
+The test case used here is a modified IEEE RTS-96 reliability test system (24-bus) that was initially developed by the IEEE reliability subcommittee and published in 1979 and later enhanced in 1996. Reference: "The IEEE Reliability Test System-1996. A report prepared by the Reliability Test System Task Force of the Application of Probability Methods Subcommittee" and link: https://ieeexplore.ieee.org/document/780914.
+Though only tested on this single system here, these codes can work on any other systems.
 
 For the most complex model (E-SOPFwNR), the code takes 130 seconds (~2 minutes) on a laptop: Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz, 32 GB RAM, Windows 10.
 
