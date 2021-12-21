@@ -1,5 +1,6 @@
 # Normal SOPF 
 # by Xingpeng.Li
+#    Website: https://rpglab.github.io/
 # run command: include SOPF.mod;
 
 # Use reset to clear memory for AMPL

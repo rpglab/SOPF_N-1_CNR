@@ -1,5 +1,6 @@
 # N-1 SOPF w. CNR/CTS
 # by Xingpeng.Li
+#    Website: https://rpglab.github.io/
 # run command: include SOPFwCAwCTS.mod;
 
 # Use reset to clear memory for AMPL

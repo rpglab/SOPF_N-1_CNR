@@ -1,5 +1,6 @@
 # Relaxed SOPF
 # by Xingpeng.Li
+#    Website: https://rpglab.github.io/
 # run command: include SOPF_InfiniteNetwork.mod;
 
 # Use reset to clear memory for AMPL
